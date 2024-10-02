@@ -18,6 +18,10 @@ public interface UserService {
     // get user by id
     User getUser(String userId);
 
+    // delete user by Id
+//    User deleteUser(String userId);
+
+
     //TODO: delete user
     //TODO: update user
 }

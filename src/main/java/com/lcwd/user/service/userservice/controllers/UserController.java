@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/users")
@@ -41,5 +42,16 @@ public class UserController {
         List<User> allUser = userService.getAllUser();
         return ResponseEntity.ok(allUser);
     }
+
+//    @DeleteMapping("/{userId}")
+//    public ResponseEntity<String> deleteUser(@PathVariable UUID userId)
+//    {
+//        try {
+//            userService.deleteUser(String.valueOf(userId));
+//            return ResponseEntity.ok("User deleted successfully");
+//        } catch (RuntimeException e) {
+//            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+//        }
+//    }
 
 }
